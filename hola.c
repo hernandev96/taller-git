@@ -1,4 +1,4 @@
 #include <stdio.h>
-int (){
+int () {
 	printf("Hola Mundo\n ¿como estas?");
 }
