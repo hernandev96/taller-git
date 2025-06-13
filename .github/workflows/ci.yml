@@ -8,3 +8,5 @@ jobs:
         uses: actions/checkout@v4
       - name: compilar codigo
         run: gcc hola.c -o hola
+      - name: ejecutar codigo
+        run: ./hola

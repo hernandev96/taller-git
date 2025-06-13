@@ -1,0 +1,19 @@
+name: Liberacion continua
+on:
+  release:
+    types: created
+permissions:
+  contents: write
+jobs:
+  compilar-y-ejecutar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: clonar el repositorio
+        uses: actions/checkout@v4
+      - name: compilar codigo
+        run: gcc hola.c -o hola -03
+      - name: subir el ejecutable
+        uses: svenstaro/upload-release-action@v2
+        with:
+          file: hola
+          repo_token: $({secrets.GITHUB_TOKEN})
