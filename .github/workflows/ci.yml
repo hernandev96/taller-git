@@ -5,7 +5,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: clonar el repositorio
-                uses: actions/checkout
+              uses: actions/checkout@v4
             - name: compilar codigo
-                run: gcc hola.c -o hola
+              run: gcc hola.c -o hola
 
